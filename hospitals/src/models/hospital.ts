@@ -3,12 +3,12 @@ import mongoose from 'mongoose';
 interface hospitalAttr {
       name:string
       location:string
-      services:[string]
+      services?:[string]
 }
 interface hospitalDoc extends mongoose.Document {
       name:string
       location:string
-      services:[string]
+      services?:[string]
 }
 
 interface hospitalModel extends mongoose.Model<hospitalDoc>{
