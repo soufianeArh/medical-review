@@ -4,11 +4,13 @@ import mongoose from "mongoose"
 //  created_at
 interface reviewRatingAttr {
       hospital_id:string,
+      device_uuid:string,
       rating:number,
       review?:string
 }
 interface reviewRatingDoc extends mongoose.Document{
       hospital_id:string,
+      device_uuid:string,
       rating:number,
       review?:string
 }
@@ -19,6 +21,10 @@ const ReviewRatingSchema = new mongoose.Schema({
       hospital_id:{
             type: String,
             required: true,
+      },
+      device_uuid:{
+            type: String,
+            required: true
       },
       rating:{
             type:Number,
